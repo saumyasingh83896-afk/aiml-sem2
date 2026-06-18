@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+
+    <h1>Simple Interest Calculator</h1>
+
+    <button onclick="calculateSI()">Calculate Simple Interest</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateSI() {
+            let principal = parseFloat(prompt("Enter Principal Amount:"));
+            let rate = parseFloat(prompt("Enter Rate of Interest (%):"));
+            let time = parseFloat(prompt("Enter Time (in Years):"));
+
+            let simpleInterest = (principal * rate * time) / 100;
+            let totalAmount = principal + simpleInterest;
+
+            document.getElementById("result").innerHTML =
+                "Principal Amount: ₹" + principal + "<br>" +
+                
+                "Rate of Interest: " + rate + "%<br>" +
+                "Time: " + time + " years<br>" +
+                "Simple Interest: ₹" + simpleInterest + "<br>" +
+                "Total Amount: ₹" + totalAmount;
+        }
+    </script>
+
+</body>
+</html>
